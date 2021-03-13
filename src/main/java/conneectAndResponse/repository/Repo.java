@@ -1,12 +1,9 @@
 package conneectAndResponse.repository;
-import conneectAndResponse.other.Book;
-
-import java.math.BigDecimal;
-import java.util.List;
-import java.util.Optional;
+import conneectAndResponse.entity.Regions;
 
 public interface Repo {
 
     int count();
+    int save(Regions regions);
 
 }

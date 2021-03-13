@@ -24,18 +24,17 @@
     <autoscroll-to-editor value="false" />
     <autoscroll-from-editor value="true" />
     <show-object-properties value="true" />
-    <loaded-nodes>
-      <connection connection-id="3e9f0a38-2ac9-4a54-a968-befc34798710">
-        <schema name="PUBLIC" object-types="function, type, package, table, materialized view, view, sequence, synonym" />
-        <schema name="SYS" object-types="type, table, materialized view, view, synonym" />
-        <schema name="USERNAME" object-types="function, type, package function, type function, package, nested table, procedure, table, index, dimension, materialized view, column, constraint, view, database trigger, cluster, sequence, package type, dataset trigger, synonym, dblink" />
-      </connection>
-    </loaded-nodes>
+    <loaded-nodes />
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="3e9f0a38-2ac9-4a54-a968-befc34798710">
       <console name="Oracle" type="STANDARD" schema="USERNAME" session="Main"><![CDATA[insert into books values ('b');
-commit ;]]></console>
+commit ;
+
+select * from books;]]></console>
+    </connection>
+    <connection id="3f1546f2-97a8-4df0-bff0-bc4a041e2924">
+      <console name="Connection" type="STANDARD" schema="HR" session="Main" />
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
@@ -46,9 +45,20 @@ commit ;]]></console>
       <session name="Session 1" id="3ca8d5f6-8795-4eae-a8bb-e32bd8d83479" />
       <session name="Session 2" id="e0f18a88-faf6-4957-b6ec-424aaef5a0af" />
     </connection>
+    <connection id="3f1546f2-97a8-4df0-bff0-bc4a041e2924" />
   </component>
   <component name="DBNavigator.Project.DatasetFilterManager">
     <filter-actions connection-id="3e9f0a38-2ac9-4a54-a968-befc34798710" dataset="USERNAME.BOOKS" active-filter-id="" />
+    <filter-actions connection-id="3e9f0a38-2ac9-4a54-a968-befc34798710" dataset="HR.REGIONS" active-filter-id="a70403c7-942f-421d-98d4-1eedfa421081">
+      <filter id="a70403c7-942f-421d-98d4-1eedfa421081" name="Filter 1" temporary="false" custom-name="false" type="basic" join-type="AND">
+        <condition column="REGION_ID" operator="is not null" value="" active="true" />
+      </filter>
+    </filter-actions>
+    <filter-actions connection-id="3e9f0a38-2ac9-4a54-a968-befc34798710" dataset="HR.EMPLOYEES" active-filter-id="7e662132-3a1f-40ae-9d06-35a82688f6ee">
+      <filter id="7e662132-3a1f-40ae-9d06-35a82688f6ee" name="Filter 1" temporary="false" custom-name="false" type="basic" join-type="AND">
+        <condition column="JOB_ID" operator="is not null" value="" active="true" />
+      </filter>
+    </filter-actions>
   </component>
   <component name="DBNavigator.Project.EditorStateManager">
     <last-used-providers />
@@ -124,6 +134,90 @@ commit ;]]></console>
           <ddl-file-binding value="true" />
           <database-logging value="false" />
           <connect-automatically value="false" />
+          <restore-workspace value="true" />
+          <restore-workspace-deep value="true" />
+          <environment-type value="default" />
+          <connectivity-timeout value="5" />
+          <idle-time-to-disconnect value="30" />
+          <idle-time-to-disconnect-pool value="5" />
+          <credential-expiry-time value="10" />
+          <max-connection-pool-size value="7" />
+          <alternative-statement-delimiter value="" />
+        </details>
+        <object-filters hide-empty-schemas="false" hide-pseudo-columns="false">
+          <object-type-filter use-master-settings="true">
+            <object-type name="SCHEMA" enabled="true" />
+            <object-type name="USER" enabled="true" />
+            <object-type name="ROLE" enabled="true" />
+            <object-type name="PRIVILEGE" enabled="true" />
+            <object-type name="CHARSET" enabled="true" />
+            <object-type name="TABLE" enabled="true" />
+            <object-type name="VIEW" enabled="true" />
+            <object-type name="MATERIALIZED_VIEW" enabled="true" />
+            <object-type name="NESTED_TABLE" enabled="true" />
+            <object-type name="COLUMN" enabled="true" />
+            <object-type name="INDEX" enabled="true" />
+            <object-type name="CONSTRAINT" enabled="true" />
+            <object-type name="DATASET_TRIGGER" enabled="true" />
+            <object-type name="DATABASE_TRIGGER" enabled="true" />
+            <object-type name="SYNONYM" enabled="true" />
+            <object-type name="SEQUENCE" enabled="true" />
+            <object-type name="PROCEDURE" enabled="true" />
+            <object-type name="FUNCTION" enabled="true" />
+            <object-type name="PACKAGE" enabled="true" />
+            <object-type name="TYPE" enabled="true" />
+            <object-type name="TYPE_ATTRIBUTE" enabled="true" />
+            <object-type name="ARGUMENT" enabled="true" />
+            <object-type name="DIMENSION" enabled="true" />
+            <object-type name="CLUSTER" enabled="true" />
+            <object-type name="DBLINK" enabled="true" />
+          </object-type-filter>
+          <object-name-filters />
+        </object-filters>
+      </connection>
+      <connection id="3f1546f2-97a8-4df0-bff0-bc4a041e2924" active="true">
+        <database>
+          <name value="Connection" />
+          <description value="" />
+          <database-type value="ORACLE" />
+          <config-type value="BASIC" />
+          <database-version value="18.0" />
+          <driver-source value="BUILTIN" />
+          <driver-library value="" />
+          <driver value="" />
+          <url-type value="SID" />
+          <host value="localhost" />
+          <port value="1521" />
+          <database value="XE" />
+          <type value="USER_PASSWORD" />
+          <user value="hr" />
+          <deprecated-pwd value="SFI=" />
+        </database>
+        <properties>
+          <auto-commit value="false" />
+        </properties>
+        <ssh-settings>
+          <active value="false" />
+          <proxy-host value="" />
+          <proxy-port value="22" />
+          <proxy-user value="" />
+          <deprecated-proxy-pwd value="" />
+          <auth-type value="PASSWORD" />
+          <key-file value="" />
+          <key-passphrase value="" />
+        </ssh-settings>
+        <ssl-settings>
+          <active value="false" />
+          <certificate-authority-file value="" />
+          <client-certificate-file value="" />
+          <client-key-file value="" />
+        </ssl-settings>
+        <details>
+          <charset value="UTF-8" />
+          <session-management value="true" />
+          <ddl-file-binding value="true" />
+          <database-logging value="false" />
+          <connect-automatically value="true" />
           <restore-workspace value="true" />
           <restore-workspace-deep value="true" />
           <environment-type value="default" />

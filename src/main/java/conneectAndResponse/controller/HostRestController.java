@@ -13,7 +13,7 @@ public class HostRestController {
     private ServiceData serviceData = new ServiceData();
 
     @GetMapping("/getTime")
-    public int getTime () {
-        return serviceData.getTime();
+    public Long getTime () {
+        return serviceData.getCount();
     }
 }

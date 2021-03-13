@@ -9,9 +9,9 @@ import org.springframework.stereotype.Service;
 @Log
 @Service
 public class ServiceData {
+    private CrudRepo crudRepo;
 
-    public int getTime() {
-        CrudRepo crudRepo = new CrudRepo();
+    public Long getCount() {
         return crudRepo.count();
     }
 }
