@@ -2,7 +2,7 @@
 <project version="4">
   <component name="DBNavigator.Project.DataEditorManager">
     <record-view-column-sorting-type value="BY_INDEX" />
-    <value-preview-text-wrapping value="true" />
+    <value-preview-text-wrapping value="false" />
     <value-preview-pinned value="false" />
   </component>
   <component name="DBNavigator.Project.DataExportManager">
@@ -24,18 +24,31 @@
     <autoscroll-to-editor value="false" />
     <autoscroll-from-editor value="true" />
     <show-object-properties value="true" />
-    <loaded-nodes />
+    <loaded-nodes>
+      <connection connection-id="3e9f0a38-2ac9-4a54-a968-befc34798710">
+        <schema name="PUBLIC" object-types="function, type, package, table, materialized view, view, sequence, synonym" />
+        <schema name="SYS" object-types="type, table, materialized view, view, synonym" />
+        <schema name="USERNAME" object-types="function, type, package function, type function, package, nested table, procedure, table, index, dimension, materialized view, column, constraint, view, database trigger, cluster, sequence, package type, dataset trigger, synonym, dblink" />
+      </connection>
+    </loaded-nodes>
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="3e9f0a38-2ac9-4a54-a968-befc34798710">
-      <console name="Oracle" type="STANDARD" schema="USERNAME" session="Main" />
+      <console name="Oracle" type="STANDARD" schema="USERNAME" session="Main"><![CDATA[insert into books values ('b');
+commit ;]]></console>
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
     <open-files />
   </component>
   <component name="DBNavigator.Project.DatabaseSessionManager">
-    <connection id="3e9f0a38-2ac9-4a54-a968-befc34798710" />
+    <connection id="3e9f0a38-2ac9-4a54-a968-befc34798710">
+      <session name="Session 1" id="3ca8d5f6-8795-4eae-a8bb-e32bd8d83479" />
+      <session name="Session 2" id="e0f18a88-faf6-4957-b6ec-424aaef5a0af" />
+    </connection>
+  </component>
+  <component name="DBNavigator.Project.DatasetFilterManager">
+    <filter-actions connection-id="3e9f0a38-2ac9-4a54-a968-befc34798710" dataset="USERNAME.BOOKS" active-filter-id="" />
   </component>
   <component name="DBNavigator.Project.EditorStateManager">
     <last-used-providers />
@@ -62,7 +75,9 @@
     <filters />
   </component>
   <component name="DBNavigator.Project.ScriptExecutionManager" clear-outputs="true">
-    <recently-used-interfaces />
+    <recently-used-interfaces>
+      <mapping database-type="ORACLE" interface-id="DEFAULT" />
+    </recently-used-interfaces>
   </component>
   <component name="DBNavigator.Project.Settings">
     <connections>
@@ -105,10 +120,10 @@
         </ssl-settings>
         <details>
           <charset value="UTF-8" />
-          <session-management value="true" />
+          <session-management value="false" />
           <ddl-file-binding value="true" />
           <database-logging value="false" />
-          <connect-automatically value="true" />
+          <connect-automatically value="false" />
           <restore-workspace value="true" />
           <restore-workspace-deep value="true" />
           <environment-type value="default" />
