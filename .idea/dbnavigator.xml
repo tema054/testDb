@@ -75,9 +75,6 @@ select count(*) from hr.regions]]></console>
   <component name="DBNavigator.Project.ExecutionManager">
     <retain-sticky-names value="false" />
   </component>
-  <component name="DBNavigator.Project.FileConnectionMappingManager">
-    <mapping file-url="file://$PROJECT_DIR$/src/main/resources/data.sql" connection-id="8b90a95b-77a7-4f25-a64e-1c3f2aeaa754" session-id="MAIN" current-schema="" />
-  </component>
   <component name="DBNavigator.Project.MethodExecutionManager">
     <method-browser />
     <execution-history>

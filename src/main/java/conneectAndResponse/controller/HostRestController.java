@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 public class HostRestController {
 
     @Autowired
-    private ServiceData serviceData  ;
+    ServiceData serviceData  ;
 
     @GetMapping("/getDual")
     public String getDual () {
