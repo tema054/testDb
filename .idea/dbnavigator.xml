@@ -24,7 +24,14 @@
     <autoscroll-to-editor value="false" />
     <autoscroll-from-editor value="true" />
     <show-object-properties value="true" />
-    <loaded-nodes />
+    <loaded-nodes>
+      <connection connection-id="3f1546f2-97a8-4df0-bff0-bc4a041e2924">
+        <schema name="HR" object-types="type, table, constraint, synonym, procedure, column, index, dblink, type function, function, database trigger, dataset trigger, dimension, view, package function, nested table, materialized view, sequence, cluster, package type, package" />
+        <schema name="PUBLIC" object-types="type, table, synonym, function, view, materialized view, sequence, package" />
+        <schema name="SYS" object-types="type, table, synonym, procedure, dblink, type function, function, database trigger, dimension, package function, materialized view, sequence, cluster, package type, package" />
+        <schema name="SYSTEM" object-types="type, table, constraint, synonym, procedure, column, dblink, function, database trigger, dataset trigger, dimension, view, materialized view, sequence, cluster, package" />
+      </connection>
+    </loaded-nodes>
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="3e9f0a38-2ac9-4a54-a968-befc34798710">
@@ -34,7 +41,9 @@ commit ;
 select * from books;]]></console>
     </connection>
     <connection id="3f1546f2-97a8-4df0-bff0-bc4a041e2924">
-      <console name="Connection" type="STANDARD" schema="HR" session="Main" />
+      <console name="Connection" type="STANDARD" schema="HR" session="Main"><![CDATA[select * from sys.v_$session s where  s.USERNAME = 'HR'
+
+select count(*) from hr.regions]]></console>
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">

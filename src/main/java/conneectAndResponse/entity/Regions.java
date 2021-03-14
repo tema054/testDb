@@ -15,14 +15,13 @@ import java.math.BigDecimal;
 @Getter
 @Setter
 public class Regions {
-
     @Id
     @GeneratedValue
+    @JoinColumn(name = "region_id")
     private int RegionId;
 
     @JoinColumn(name = "region_name")
     private String RegionName;
-
 
     public String getName() {
         return RegionName;
