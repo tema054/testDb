@@ -28,7 +28,7 @@
       <connection connection-id="3f1546f2-97a8-4df0-bff0-bc4a041e2924">
         <schema name="HR" object-types="type, table, constraint, synonym, procedure, column, index, dblink, type function, function, database trigger, dataset trigger, dimension, view, package function, nested table, materialized view, sequence, cluster, package type, package" />
         <schema name="PUBLIC" object-types="type, table, synonym, function, view, materialized view, sequence, package" />
-        <schema name="SYS" object-types="type, table, synonym, procedure, dblink, type function, function, database trigger, dimension, package function, materialized view, sequence, cluster, package type, package" />
+        <schema name="SYS" object-types="table, synonym, procedure, dblink, function, database trigger, dimension, materialized view, sequence, cluster" />
         <schema name="SYSTEM" object-types="type, table, constraint, synonym, procedure, column, dblink, function, database trigger, dataset trigger, dimension, view, materialized view, sequence, cluster, package" />
       </connection>
     </loaded-nodes>
@@ -226,7 +226,7 @@ select count(*) from hr.regions]]></console>
           <session-management value="true" />
           <ddl-file-binding value="true" />
           <database-logging value="false" />
-          <connect-automatically value="true" />
+          <connect-automatically value="false" />
           <restore-workspace value="true" />
           <restore-workspace-deep value="true" />
           <environment-type value="default" />
