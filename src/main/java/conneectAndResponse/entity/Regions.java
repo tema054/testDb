@@ -4,10 +4,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.math.BigDecimal;
 
 
@@ -18,9 +15,10 @@ import java.math.BigDecimal;
 @Getter
 @Setter
 public class Regions {
-    @Id
-    private int RegionId;
 
+    @Id
+    @GeneratedValue
+    private int RegionId;
 
     @JoinColumn(name = "region_name")
     private String RegionName;
